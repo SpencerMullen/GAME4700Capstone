@@ -11,6 +11,7 @@ public class Flavor
         category = _category;
         strength = _strength;
     }
+
     public string name { get; }
     public Flavors category { get; }
     // Should be a variable between 1 and 3 for weak, med, strong

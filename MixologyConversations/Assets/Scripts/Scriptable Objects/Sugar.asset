@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb4fab54096ff04ca76bf04d1a2c0f0, type: 3}
   m_Name: Sugar
   m_EditorClassIdentifier: 
-  ingredientName: 
+  ingredientName: Sugar
   description: 
-  cost: 0
+  cost: 1
+  rarity: 0
   sprite: {fileID: 0}
-  flavors: []
-  effects: []
+  flavorNames:
+  - green
+  effectNames: []

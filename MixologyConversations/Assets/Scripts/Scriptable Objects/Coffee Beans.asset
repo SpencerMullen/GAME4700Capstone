@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb4fab54096ff04ca76bf04d1a2c0f0, type: 3}
   m_Name: Coffee Beans
   m_EditorClassIdentifier: 
-  ingredientName: 
+  ingredientName: Coffee Beans
   description: 
-  cost: 0
+  cost: 3
+  rarity: 0
   sprite: {fileID: 0}
-  flavors: []
-  effects: []
+  flavorNames:
+  - blue
+  effectNames:
+  - energy
