@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    // Dictionary of card Ids and ingredients
+    private Dictionary<string, Ingredient> mixingCardSet;
+    /* Can delete late, using for testing rn*/
+    private List<string> mixingCardNames;
 
-    private List<Ingredient> mixingCardSet;
+    [SerializeField] private PlayerInventory playerInventory;
 
     // Start is called before the first frame update
     void Start()
@@ -25,4 +29,14 @@ public class InventoryManager : MonoBehaviour
      */
 
 
+    public void addToMixingCards(Ingredient i)
+    {
+        bool ingredientAvailable = playerInventory.takeIngredient(i);
+        if (ingredientAvailable)
+        {
+            mixingCardNames.Add(i.ingredientName);
+        }
+
+        Debug.Log(mixingCardNames);
+    }
 }

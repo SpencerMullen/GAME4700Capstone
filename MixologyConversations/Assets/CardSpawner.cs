@@ -16,5 +16,8 @@ public class CardSpawner : MonoBehaviour
         
     }
 
-    public void SpawnCard
+    public void SpawnCard()
+    {
+
+    }
 }
