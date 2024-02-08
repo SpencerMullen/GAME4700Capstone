@@ -19,4 +19,5 @@ public class Ingredient : ScriptableObject
     public List<string> effectNames;
 
     public List<Flavor> flavors;
+
 }
