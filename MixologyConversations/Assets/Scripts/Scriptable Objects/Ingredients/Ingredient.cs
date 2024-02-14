@@ -18,9 +18,4 @@ public class Ingredient : ScriptableObject
     public List<string> flavorNames;
     public List<string> effectNames;
 
-    public List<Flavor> flavors;
-
-    // TODO: We might need a function let GenerateCard() here that spawns and returns a new instance of the 'sprite' from above - should
-    // that be in here, or should it be done all in a CardSpawner?
-
 }
