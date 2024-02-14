@@ -653,7 +653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1107622666
 Transform:
   m_ObjectHideFlags: 0
@@ -686,9 +686,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 0}
   descriptionText: {fileID: 0}
-  costText: {fileID: 0}
   icon: {fileID: 0}
   iconObject: {fileID: 0}
+  ingredient: {fileID: 0}
 --- !u!1001 &1114975790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,16 +785,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sugar Card
       objectReference: {fileID: 0}
+    - target: {fileID: 8442742012813841770, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3656503181013632595, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3749578275515036776, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
 --- !u!4 &1114975791 stripped
 Transform:
@@ -913,6 +911,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7e7aa7efe2c6c534ab2f576c72f8ed1d, type: 3}
+    - target: {fileID: 5934239157194542305, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
+      propertyPath: ingredient
+      value: 
+      objectReference: {fileID: 11400000, guid: d9ac6f37ce038b845a95a557f2f5cf13, type: 2}
     - target: {fileID: 8199781043117974218, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1129,6 +1131,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1770433202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770433204}
+  - component: {fileID: 1770433203}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1770433203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770433202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76dfca7dab67ce94aac64bb96d0302fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addMixingIngredient:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1770433204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770433202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14332518, y: -0.2644997, z: -0.029714055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881330477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,10 +1270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200248153}
     m_Modifications:
-    - target: {fileID: 2673013699868345483, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 5934239157194542305, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
+      propertyPath: ingredient
       value: 
-      objectReference: {fileID: 21300000, guid: 95cbf3abb1d7d2c4185ce264cbdea57f, type: 3}
+      objectReference: {fileID: 11400000, guid: 03f50a1746215494f8a3960b3fa50a47, type: 2}
     - target: {fileID: 8199781043117974218, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
       propertyPath: m_RootOrder
       value: -1

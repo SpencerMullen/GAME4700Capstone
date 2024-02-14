@@ -6,24 +6,26 @@ using UnityEngine;
 public class PlayerInventory : ScriptableObject
 {
     // TODO: not public
-    [SerializeField] private List<Ingredient> allIngredients;
+    [SerializeField] private List<Ingredient> allIngredients = new List<Ingredient>();
 
     /* List of ingredients with the amount in the inventory currently */
-    private Dictionary<Ingredient, int> ingredients;
+    private Dictionary<Ingredient, int> ingredients = new Dictionary<Ingredient, int>();
 
 
     /* Used for development, at least until we get a custom dictionary UI editor built in*/
     public void Initialize()
     {
+        Debug.Log(allIngredients);
+        Debug.Log(allIngredients.Count);
         foreach (Ingredient i in allIngredients) {
-            ingredients.Add(i, 10);
+            Debug.Log(i.name);
+            ingredients.TryAdd(i, 10);
         }
     }
 
     public bool takeIngredient(Ingredient i)
     {
-        int amount;
-        ingredients.TryGetValue(i, out amount);
+        ingredients.TryGetValue(i, out int amount);
         if (amount > 0)
         {
             Debug.Log("Taking ingredient from inventory; Remaining: " + (amount - 1));
