@@ -32,12 +32,9 @@ public class IngredientCard : MonoBehaviour
     {
         titleText.text = _ingredient.name;
         descriptionText.text = _ingredient.description;
-        // costText.text = _ingredient.cost.ToString();
 
         icon.sprite = _ingredient.image;
-
         ingredient = _ingredient;
-
     }
 
     void OnMouseDown()
