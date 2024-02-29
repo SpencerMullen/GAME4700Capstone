@@ -23,7 +23,7 @@ public class MixingInventoryManager : MonoBehaviour {
         Debug.Log("Passed object ID: " + ingredientPrefab.GetInstanceID());
         if (nextSpotIndex < maxIngredients)
         {
-            // TODO: Move this logic into Mixing Spot class
+            // TODO: Move this logic into Mixing Spot class, check for already filled game object slot
             Transform spotParent = mixingSpots[nextSpotIndex].spotPos;
             GameObject spawned = Instantiate(ingredientPrefab, spotParent.position, spotParent.rotation, spotParent);
             mixingSpots[nextSpotIndex].currentIngredient = spawned;
