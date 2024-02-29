@@ -47,3 +47,6 @@ TagManager:
   - name: cards
     uniqueID: 449691883
     locked: 0
+  - name: frontDecor
+    uniqueID: 3378249143
+    locked: 0

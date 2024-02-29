@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MixingInventoryManager : MonoBehaviour
+public class ClearIngredients : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,4 @@ public class MixingInventoryManager : MonoBehaviour
     {
         
     }
-
-    // List of GameObject slots that 
 }
