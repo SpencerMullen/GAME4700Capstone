@@ -10,17 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6279c52a592acc4bba0e1506555c9bc, type: 3}
-  m_Name: Milk Tea
+  m_Name: Sweet Tea
   m_EditorClassIdentifier: 
   requiredIngredients:
-  - {fileID: 11400000, guid: b6f79f2f75555174892caa7cab2e1eb8, type: 2}
-  - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
   - {fileID: 11400000, guid: d9ac6f37ce038b845a95a557f2f5cf13, type: 2}
-  title: Milk Tea
-  image: {fileID: 21300000, guid: b13e75861c986ca49a24a31313ac3b86, type: 3}
-  description: Sweet, Happy, Straightforward
-  tags:
-  - sweet
-  - happy
-  - straightforward
+  - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
+  - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
+  title: Sweet Tea
+  image: {fileID: 21300000, guid: 6e10820baf2fd674f9aa3dd39cb6452e, type: 3}
+  description: 
+  tags: []
   isDiscovered: 0
