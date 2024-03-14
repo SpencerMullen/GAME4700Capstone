@@ -9,6 +9,7 @@ public class Ingredient : ScriptableObject
     public string description;
     public float cost;
     public int rarity; // enum?
+    public string id;
 
     [Tooltip("Reference to the prefab that is the in-scene ingredient for mixing/display during the day cycle")]
     public GameObject sprite;
