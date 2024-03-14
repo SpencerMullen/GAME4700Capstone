@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MixingInventoryManager : MonoBehaviour { 
@@ -8,17 +9,24 @@ public class MixingInventoryManager : MonoBehaviour {
     [SerializeField] private int maxIngredients;
     private int nextSpotIndex;
 
+    [SerializeField] private RecipeInventory recipeInventory;
+
+    [SerializeField] private GameObject drinkSpawn;
+    private SpriteRenderer drinkSprite;
+
     // Start is called before the first frame update
     void Start()
     {
         nextSpotIndex = 0;
+        drinkSpawn.SetActive(false);
+        drinkSprite = drinkSpawn.GetComponent<SpriteRenderer>();
     }
-    
+
     /*
      * Attempt to add an ingredient to the mixing table if there is an available slot.
      * Returns true if ingredient was added; false otherwise.
      */
-    public bool addIngredient(GameObject ingredientPrefab)
+    public bool addIngredient(GameObject ingredientPrefab, Ingredient ingredientData)
     {
         Debug.Log("Passed object ID: " + ingredientPrefab.GetInstanceID());
         if (nextSpotIndex < maxIngredients)
@@ -27,6 +35,8 @@ public class MixingInventoryManager : MonoBehaviour {
             Transform spotParent = mixingSpots[nextSpotIndex].spotPos;
             GameObject spawned = Instantiate(ingredientPrefab, spotParent.position, spotParent.rotation, spotParent);
             mixingSpots[nextSpotIndex].currentIngredient = spawned;
+            mixingSpots[nextSpotIndex].currentIngredientData = ingredientData;
+
             nextSpotIndex += 1;
             return true;
         } else
@@ -43,9 +53,11 @@ public class MixingInventoryManager : MonoBehaviour {
         {
             case "clear":
                 clearIngredients();
+                clearDrinkSpawn();
                 break;
             case "mix":
                 Debug.Log("Ingredients Mixing");
+                mixIngredients();
                 // TODO : gather ingredients and call a recipe creator class to check if it makes a recipe
                 break;
             default:
@@ -63,12 +75,41 @@ public class MixingInventoryManager : MonoBehaviour {
         Debug.Log("Ingredients Cleared");
     }
 
+    void clearDrinkSpawn()
+    {
+        drinkSpawn.SetActive(false);
+    }
+
+    void mixIngredients()
+    {
+        List<Ingredient> ingredients = mixingSpots.Select(spot => spot.currentIngredientData).Where(ingredient => ingredient != null).ToList();
+        foreach (Ingredient ingredient in ingredients)
+        {
+            Debug.Log(ingredient.name);
+        }
+
+        Recipe createdRecipe = recipeInventory.getRecipeFromIngredients(ingredients);
+        if (createdRecipe != null)
+        {
+            Debug.Log(createdRecipe.name);
+            drinkSprite.sprite = createdRecipe.image;
+            drinkSpawn.SetActive(true);
+        } else
+        {
+            Debug.Log("No recipe can be created");
+        }
+
+        clearIngredients();
+
+    }
+
     [System.Serializable]
     class MixingSpot
     {
         // TODO : getter, setter
         public Transform spotPos;
         public GameObject currentIngredient;
+        public Ingredient currentIngredientData;
 
         public void removeIngredient()
         {
@@ -76,6 +117,8 @@ public class MixingInventoryManager : MonoBehaviour {
             {
                 Destroy(currentIngredient);
             }
+
+            currentIngredientData = null;
         }
     }
 }

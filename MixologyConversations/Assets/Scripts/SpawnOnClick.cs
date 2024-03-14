@@ -7,6 +7,7 @@ public class SpawnOnClick : MonoBehaviour
 {
 
     [SerializeField] private MixingInventoryManager mixingManager;
+    [SerializeField] private Ingredient ingredientData;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class SpawnOnClick : MonoBehaviour
     {
         Debug.Log("Object pressed");
         // Populate ingredient in the mixing card table
-        mixingManager.addIngredient(gameObject);
+        mixingManager.addIngredient(gameObject, ingredientData);
 
         // OR
 

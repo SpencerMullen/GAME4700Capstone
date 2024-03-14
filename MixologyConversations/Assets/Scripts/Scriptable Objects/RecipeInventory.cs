@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Recipe Inventory")]
 public class RecipeInventory : ScriptableObject
 {
-    private List<Recipe> recipes;
+    [SerializeField] private List<Recipe> recipes;
 
     // A dictionary between the id for the ingredient set and the Recipe it creates
-    private Dictionary<string, Recipe> recipeCreationMap;
+    private Dictionary<string, Recipe> recipeCreationMap = new Dictionary<string, Recipe>();
 
 
     /*
@@ -19,6 +20,7 @@ public class RecipeInventory : ScriptableObject
         foreach (Recipe recipe in recipes)
         {
             string recipeKey = getIngredientSetId(recipe.requiredIngredients);
+            Debug.Log("Recipe key: " + recipeKey);
             recipeCreationMap[recipeKey] = recipe;
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PopulateRecipeInventory : MonoBehaviour
 {
-    RecipeInventory recipeInventory;
+    public RecipeInventory recipeInventory;
 
     // Start is called before the first frame update
     void Start()

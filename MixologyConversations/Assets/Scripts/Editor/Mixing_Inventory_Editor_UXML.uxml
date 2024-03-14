@@ -1,5 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
     <ui:Label tabindex="-1" text="Mixing Inventory Slots" display-tooltip-when-elided="true" name="Label" style="-unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/Josefin_Sans/static/JosefinSans-Light.ttf?fileID=12800000&amp;guid=5bc2390e28eb59440ab878f40a99d280&amp;type=3#JosefinSans-Light&apos;);" />
     <ui:IntegerField label="Max Ingredient Slots" value="3" binding-path="maxIngredients" />
-    <uie:PropertyField label="Mixing Spots" binding-path="mixingSpots" />
+    <uie:PropertyField label="Mixing Spots" binding-path="mixingSpots" name="PropertyField" />
+    <uie:PropertyField binding-path="recipeInventory" label="Recipe Inventory" name="recipeInventory" />
+    <uie:PropertyField name="drinkSpawn" binding-path="drinkSpawn" label="Drink Spawn" />
 </ui:UXML>
