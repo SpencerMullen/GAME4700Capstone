@@ -2,12 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class SpawnOnClick : MonoBehaviour
 {
+
+    [SerializeField] private MixingInventoryManager mixingManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (mixingManager == null)
+        {
+            mixingManager = FindObjectOfType<MixingInventoryManager>();
+        }
+
+        Debug.Log("original id: " + gameObject.GetInstanceID());
     }
 
     // Update is called once per frame
@@ -18,7 +27,9 @@ public class SpawnOnClick : MonoBehaviour
 
     void OnMouseDown()
     {
+        Debug.Log("Object pressed");
         // Populate ingredient in the mixing card table
+        mixingManager.addIngredient(gameObject);
 
         // OR
 
