@@ -16,7 +16,9 @@ MonoBehaviour:
   description: 
   cost: 1
   rarity: 0
+  id: 
   sprite: {fileID: 0}
+  image: {fileID: 21300000, guid: fcb0e99ace6463d44a1a2640e3ad6abe, type: 3}
   flavorNames:
   - green
   effectNames: []
