@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        playerInventory.Initialize();
+        // playerInventory.Initialize();
     }
     /* 
      * TODO: 
@@ -22,7 +22,7 @@ public class InventoryManager : MonoBehaviour
      */
 
 
-    public void addToMixingCards(Ingredient i)
+    /*public void addToMixingCards(Ingredient i)
     {
         bool ingredientAvailable = playerInventory.takeIngredient(i);
         if (ingredientAvailable)
@@ -31,5 +31,5 @@ public class InventoryManager : MonoBehaviour
         }
 
         Debug.Log(mixingCardNames.Count);
-    }
+    }*/
 }

@@ -16,8 +16,8 @@ MonoBehaviour:
   description: 
   cost: 2
   rarity: 0
-  sprite: {fileID: 8442742012813841770, guid: 9b8384c3596d6a546beb3124bb7d0b89, type: 3}
-  image: {fileID: 21300000, guid: dce6ddde27629b8488a88b5f3fcc7596, type: 3}
+  id: lemon
+  sprite: {fileID: 21300000, guid: 95cbf3abb1d7d2c4185ce264cbdea57f, type: 3}
   flavorNames:
   - red
   effectNames: []
