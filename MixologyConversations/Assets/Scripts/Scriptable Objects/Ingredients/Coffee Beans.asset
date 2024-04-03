@@ -17,8 +17,7 @@ MonoBehaviour:
   cost: 3
   rarity: 0
   id: coffee
-  sprite: {fileID: 0}
-  image: {fileID: 21300000, guid: 8c69460c39ef32d4f9e6d70ade4d895b, type: 3}
+  sprite: {fileID: 21300000, guid: 8c69460c39ef32d4f9e6d70ade4d895b, type: 3}
   flavorNames:
   - blue
   effectNames:

@@ -23,12 +23,12 @@ public class IngredientCard : MonoBehaviour
     {
        if (inventoryManager == null)
         {
-            inventoryManager = FindFirstObjectByType<InventoryManager>();
+           // inventoryManager = FindFirstObjectByType<InventoryManager>();
         }
     }
 
     /** Populate the card face details from the given Ingredient S.O. instance. */
-    public void PopulateDetailsFrom(Ingredient _ingredient)
+    /*public void PopulateDetailsFrom(Ingredient _ingredient)
     {
         titleText.text = _ingredient.name;
         descriptionText.text = _ingredient.description;
@@ -39,7 +39,6 @@ public class IngredientCard : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(ingredient.name + " was clicked");
-        inventoryManager.addToMixingCards(ingredient);
-    }
+         Debug.Log(ingredient.name + " was clicked");
+    }*/
 }
