@@ -12,8 +12,8 @@ public class Ingredient : ScriptableObject
     public string id;
 
     [Tooltip("Reference to the prefab that is the in-scene ingredient for mixing/display during the day cycle")]
-    public GameObject sprite;
-    public Sprite image;
+    // public GameObject sprite;
+    public Sprite sprite;
 
     // TODO: Effects and flavors - these likely should be a separate enum rather than just string, or maybe even their own classes
     public List<string> flavorNames;

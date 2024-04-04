@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class MixingInventoryManager : MonoBehaviour { 
+public class MixingInventoryManager : MonoBehaviour
+{
 
     [SerializeField] private MixingSpot[] mixingSpots;
     [SerializeField] private int maxIngredients;
@@ -41,7 +42,8 @@ public class MixingInventoryManager : MonoBehaviour {
 
             nextSpotIndex += 1;
             return true;
-        } else
+        }
+        else
         {
             Debug.Log("Mixing slots full.");
             return false;

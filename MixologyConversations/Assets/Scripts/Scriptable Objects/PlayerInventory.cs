@@ -5,15 +5,26 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player Inventory")]
 public class PlayerInventory : ScriptableObject
 {
-    // TODO: not public
     [SerializeField] private List<Ingredient> allIngredients = new List<Ingredient>();
 
+
+    public Ingredient GetIngredient(string id)
+    {
+        foreach (Ingredient i in allIngredients)
+        {
+            if (i.id == id)
+            {
+                return i;
+            }
+        }
+        return null;
+    }
     /* List of ingredients with the amount in the inventory currently */
-    private Dictionary<Ingredient, int> ingredients = new Dictionary<Ingredient, int>();
+    // private Dictionary<Ingredient, int> ingredients = new Dictionary<Ingredient, int>();
 
 
     /* Used for development, at least until we get a custom dictionary UI editor built in*/
-    public void Initialize()
+    /* public void Initialize()
     {
         Debug.Log(allIngredients);
         Debug.Log(allIngredients.Count);
@@ -21,9 +32,9 @@ public class PlayerInventory : ScriptableObject
             Debug.Log(i.name);
             ingredients.TryAdd(i, 10);
         }
-    }
+    }*/
 
-    public bool takeIngredient(Ingredient i)
+    /*public bool takeIngredient(Ingredient i)
     {
         ingredients.TryGetValue(i, out int amount);
         if (amount > 0)
@@ -37,5 +48,5 @@ public class PlayerInventory : ScriptableObject
             Debug.Log("No more of these");
             return false;
         }
-    }
+    }*/
 }

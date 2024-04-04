@@ -6,8 +6,8 @@ using UnityEngine;
 public class SpawnOnClick : MonoBehaviour
 {
 
-    [SerializeField] private MixingInventoryManager mixingManager;
-    [SerializeField] private Ingredient ingredientData;
+    [SerializeField] public MixingInventoryManager mixingManager;
+    [SerializeField] public Ingredient ingredientData;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class SpawnOnClick : MonoBehaviour
             mixingManager = FindObjectOfType<MixingInventoryManager>();
         }
 
-        Debug.Log("original id: " + gameObject.GetInstanceID());
+        // Debug.Log("original id: " + gameObject.GetInstanceID());
     }
 
     // Update is called once per frame
@@ -35,5 +35,10 @@ public class SpawnOnClick : MonoBehaviour
         // OR
 
         // Drag and drop ability, instantiate a 'draggable ingredient' prefab, call the 'populateIngredient' function?
+    }
+
+    public void SetIngredientData(Ingredient data)
+    {
+        ingredientData = data;
     }
 }
