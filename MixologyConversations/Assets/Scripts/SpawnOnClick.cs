@@ -28,13 +28,16 @@ public class SpawnOnClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Object pressed");
+        // Check if UI is active
+        if (UIManager.instance.isUIActive)
+        {
+            return;
+        }
+
+        // Debug.Log("Object pressed");
         // Populate ingredient in the mixing card table
         mixingManager.addIngredient(gameObject, ingredientData);
-
-        // OR
-
-        // Drag and drop ability, instantiate a 'draggable ingredient' prefab, call the 'populateIngredient' function?
+        // Alternatively, Drag and drop ability, instantiate a 'draggable ingredient' prefab, call the 'populateIngredient' function?
     }
 
     public void SetIngredientData(Ingredient data)

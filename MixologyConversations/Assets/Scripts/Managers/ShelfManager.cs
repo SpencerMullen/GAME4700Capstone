@@ -10,6 +10,12 @@ public class ShelfManager : MonoBehaviour
     private GameObject ingredientPrefab;
     [SerializeField]
     private List<Transform> shelfSpots;
+    [SerializeField]
+    private GameObject leftArrow;
+    [SerializeField]
+    private GameObject rightArrow;
+    // Page number
+    private int page = 0;
 
     [Header("Ingredients")]
     [SerializeField]
@@ -25,23 +31,51 @@ public class ShelfManager : MonoBehaviour
             instance = this;
         }
 
+        // Clear shelf
+        ClearShelf();
+
         // Initial basic ingredients
         InitialIngredients();
 
         // Populate shelf
-        PopulateShelf();
+        page = 0;
+        PopulateShelf(page);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Check if there are more ingredients to the right
+        if((page + 1) * 9 < unlocked.Count) {
+            rightArrow.SetActive(true);
+        } else {
+            rightArrow.SetActive(false);
+        }
+
+        // Check if there are more ingredients to the left
+        if(page > 0) {
+            leftArrow.SetActive(true);
+        } else {
+            leftArrow.SetActive(false);
+        }
     }
 
     // Add initial ingredients to the shelf
     public void InitialIngredients() {
         // Add coffee, milk, sugar, tea to unlocked
         AddToUnlocked("coffee");
+        AddToUnlocked("milk");
+        AddToUnlocked("sugar");
+        AddToUnlocked("tea");
+
+        // Testing
+        AddToUnlocked("coffee");
+        AddToUnlocked("milk");
+        AddToUnlocked("sugar");
+        AddToUnlocked("tea");AddToUnlocked("coffee");
+        AddToUnlocked("milk");
+        AddToUnlocked("sugar");
+        AddToUnlocked("tea");AddToUnlocked("coffee");
         AddToUnlocked("milk");
         AddToUnlocked("sugar");
         AddToUnlocked("tea");
@@ -56,12 +90,41 @@ public class ShelfManager : MonoBehaviour
         }
     }
 
-    // Populate Shelf
-    public void PopulateShelf() {
-        for(int i = 0; i < shelfSpots.Count; i++) {
+    // Populate the shelf given the page number
+    // Starting at 0 (the first 9 ingredients) and incrementing by 9
+    public void PopulateShelf(int page) {
+        ClearShelf();
+        for(int i = page * 9; i < (page + 1) * 9; i++) {
             if(i < unlocked.Count) {
-                // Debug.Log("Populating ingredient: " + unlocked[i].name);
-                PopulateIngredient(shelfSpots[i], unlocked[i]);
+                // Debug.Log("Populating ingredient: " + unlocked[i].name + " | " + i);
+                PopulateIngredient(shelfSpots[i % 9], unlocked[i]);
+            }
+        }
+    }
+
+    // Go to the page to the left
+    public void GoLeft() {
+        Debug.Log("Going left");
+        if(page > 0) {
+            page--;
+            PopulateShelf(page);
+        }
+    }
+
+    // Go to the page to the right
+    public void GoRight() {
+        Debug.Log("Going right");
+        if((page + 1) * 9 < unlocked.Count) {
+            page++;
+            PopulateShelf(page);
+        }
+    }
+
+    // Clear the shelf
+    public void ClearShelf() {
+        foreach(Transform spot in shelfSpots) {
+            foreach(Transform child in spot) {
+                Destroy(child.gameObject);
             }
         }
     }
