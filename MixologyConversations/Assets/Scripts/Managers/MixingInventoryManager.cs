@@ -15,7 +15,7 @@ public class MixingInventoryManager : MonoBehaviour
     [SerializeField] private GameObject drinkSpawn;
     private SpriteRenderer drinkSprite;
 
-    private Recipe currentDrink { get; };
+    public Recipe currentDrink;
 
     // Start is called before the first frame update
     void Start()
