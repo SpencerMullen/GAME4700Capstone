@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1507196488095521092}
   - component: {fileID: 3419189902695275243}
   - component: {fileID: 4691934016787132542}
+  - component: {fileID: 2757859683791045400}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Untagged
@@ -145,6 +146,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: clear
   mixingManager: {fileID: 4355161583735905184}
+--- !u!114 &2757859683791045400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434820630271427520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6147027d87a952842bb499def332bd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipText: Delete current drink
 --- !u!1 &987649126848258996
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +304,7 @@ GameObject:
   - component: {fileID: 4130033120683333048}
   - component: {fileID: 3234481332179201687}
   - component: {fileID: 5233635476983386695}
+  - component: {fileID: 9015803654189548727}
   m_Layer: 0
   m_Name: Mixer
   m_TagString: Untagged
@@ -423,6 +438,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: mix
   mixingManager: {fileID: 4355161583735905184}
+--- !u!114 &9015803654189548727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575612100208281623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6147027d87a952842bb499def332bd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipText: Mix ingredients
 --- !u!1 &2633217760404314251
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +519,7 @@ Transform:
   - {fileID: 1089031667642390876}
   - {fileID: 1514262298773513006}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &375596707217781126
 MonoBehaviour:
@@ -563,6 +591,7 @@ GameObject:
   - component: {fileID: 4903395078708701041}
   - component: {fileID: 5454903097176854332}
   - component: {fileID: 654081408890442479}
+  - component: {fileID: 8136683979717307118}
   m_Layer: 0
   m_Name: RightArrow
   m_TagString: Untagged
@@ -695,6 +724,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+--- !u!114 &8136683979717307118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924091840430547859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6147027d87a952842bb499def332bd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipText: Next ingredients
 --- !u!1 &6228086497839964015
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +842,7 @@ GameObject:
   - component: {fileID: 2891068823579531183}
   - component: {fileID: 7887046727133003005}
   - component: {fileID: 5799341183573820635}
+  - component: {fileID: 6195130288007379912}
   m_Layer: 0
   m_Name: LeftArrow
   m_TagString: Untagged
@@ -932,6 +975,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+--- !u!114 &6195130288007379912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916019218540515021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6147027d87a952842bb499def332bd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipText: Previous ingredients
 --- !u!1 &7072825223123321117
 GameObject:
   m_ObjectHideFlags: 0

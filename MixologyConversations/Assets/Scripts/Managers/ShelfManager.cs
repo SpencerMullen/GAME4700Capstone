@@ -67,18 +67,6 @@ public class ShelfManager : MonoBehaviour
         AddToUnlocked("milk");
         AddToUnlocked("sugar");
         AddToUnlocked("tea");
-
-        // Testing
-        AddToUnlocked("coffee");
-        AddToUnlocked("milk");
-        AddToUnlocked("sugar");
-        AddToUnlocked("tea");AddToUnlocked("coffee");
-        AddToUnlocked("milk");
-        AddToUnlocked("sugar");
-        AddToUnlocked("tea");AddToUnlocked("coffee");
-        AddToUnlocked("milk");
-        AddToUnlocked("sugar");
-        AddToUnlocked("tea");
     }
 
     // Given an ingredient id, add to unlocked
@@ -137,5 +125,7 @@ public class ShelfManager : MonoBehaviour
         spawned.GetComponent<SpriteRenderer>().sprite = ingredient.sprite;
         // Set the ingredient data of spawned equal to the ingredient
         spawned.GetComponent<SpawnOnClick>().SetIngredientData(ingredient);
+        // Set the ingredient tooltip equal to the ingredient description
+        spawned.GetComponent<HoverTooltip>().SetTooltip(ingredient.description);
     }
 }
