@@ -75,10 +75,12 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON, Sprite characterPortrait, string name)
     {
+        // Enter the ink story using dialogue UI
         currentStory = new Story(inkJSON.text);
         isDialogueActive = true;
-        dialoguePanel.SetActive(true);
+        dialoguePanel.SetActive(true);        
 
+        // Set the character portrait and name
         portraitImage.sprite = characterPortrait;
         nametagText.text = name;
 
