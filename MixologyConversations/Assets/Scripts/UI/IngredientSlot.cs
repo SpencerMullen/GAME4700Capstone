@@ -9,6 +9,8 @@ public class IngredientSlot : MonoBehaviour
     [SerializeField] private Image      ingredientImage;
     [SerializeField] private GameObject selectedPanel;
 
+    public IngredientMenuManager ingredientMenuManager;
+
     void Awake()
     {
         ingredientImage = transform.Find("ItemImage").gameObject.GetComponent<Image>();
@@ -21,9 +23,30 @@ public class IngredientSlot : MonoBehaviour
         ingredientImage.sprite = ingredient.sprite;
     }
 
+    // Method to set the ingredient for this slot
+    public void SetIngredient(Ingredient newIngredient, IngredientMenuManager manager)
+    {
+        ingredient = newIngredient;
+        ingredientImage.sprite = ingredient.sprite;
+        ingredientMenuManager = manager;
+
+    }
+
     // Update is called once per frame
     void Update()
     {   
         
+    }
+
+    // Method called when the slot is clicked
+    public void OnSlotClicked()
+    {
+        Debug.Log("Slot clicked! Ingredient: " + ingredient.name);
+        
+        // Add your click handling logic here
+        if (ingredientMenuManager != null)
+        {
+            ingredientMenuManager.updateCurrentIngredient(ingredient);
+        }
     }
 }

@@ -19,6 +19,11 @@ public class PlayerInventory : ScriptableObject
         }
         return null;
     }
+
+    public List<Ingredient> GetIngredientInventory()
+    {
+        return allIngredients;
+    }
     /* List of ingredients with the amount in the inventory currently */
     // private Dictionary<Ingredient, int> ingredients = new Dictionary<Ingredient, int>();
 
