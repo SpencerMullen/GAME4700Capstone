@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coffee Beans
   m_EditorClassIdentifier: 
   ingredientName: Coffee Beans
-  description: Some delicious coffee beans
+  description: Makes great coffee!
   cost: 3
   rarity: 0
   id: coffee
