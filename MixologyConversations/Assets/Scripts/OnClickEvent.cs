@@ -18,6 +18,12 @@ public class OnClickEvent : MonoBehaviour
 
     void OnMouseDown()
     {
+        // Check if UI is active
+        if (UIManager.instance.isUIActive)
+        {
+            return;
+        }
+
         mixingManager.handleMessage(eventType);
     }
 }
