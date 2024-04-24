@@ -10,6 +10,7 @@ public class IngredientMenuManager : MonoBehaviour
     public GameObject IngredientSlotPrefab; 
     public PlayerInventory Inventory; 
     public Ingredient currentIngredient;
+    public Ingredient lockedIngredient;
  
     private GameObject ingredientDescription;
     private Image ingredientImage;
@@ -20,8 +21,8 @@ public class IngredientMenuManager : MonoBehaviour
     {
         ingredientDescription = transform.Find("IngredientDescription").gameObject;
         GameObject topObject = ingredientDescription.transform.Find("TopDescription").gameObject;
-        ingredientImage = topObject.transform.Find("Image").GetComponent<Image>();
-        ingredients = topObject.transform.Find("Ingredients").GetComponent<TextMeshProUGUI>();
+        ingredientImage = topObject.transform.Find("Border").gameObject.transform.Find("ItemImage").GetComponent<Image>();
+        ingredients = topObject.transform.Find("IngredientName").GetComponent<TextMeshProUGUI>();
         ingredientDescriptionText = ingredientDescription.transform.Find("Description").GetComponent<TextMeshProUGUI>();
     }
 
@@ -32,7 +33,14 @@ public class IngredientMenuManager : MonoBehaviour
         {
             GameObject newSlot = Instantiate(IngredientSlotPrefab, transform.position, Quaternion.identity);
             IngredientSlot ingredientSlot = newSlot.GetComponent<IngredientSlot>();
-            ingredientSlot.SetIngredient(i, this);
+            if (i.isUnlocked())
+            {
+                ingredientSlot.SetIngredient(i, this);
+            }
+            else 
+            {
+                ingredientSlot.SetIngredient(lockedIngredient, this);
+            }
             Transform correctParent = transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0);
             newSlot.transform.SetParent(correctParent);
         }
@@ -42,6 +50,9 @@ public class IngredientMenuManager : MonoBehaviour
     {
         currentIngredient = ingredient;
         ingredientImage.sprite = currentIngredient.sprite;
+        var tempColor = ingredientImage.color;
+        tempColor.a = 1f;
+        ingredientImage.color = tempColor;
         ingredientDescriptionText.SetText(currentIngredient.description);
 
         // Flavors

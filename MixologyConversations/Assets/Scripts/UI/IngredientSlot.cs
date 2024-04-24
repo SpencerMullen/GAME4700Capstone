@@ -8,7 +8,7 @@ public class IngredientSlot : MonoBehaviour
     [SerializeField] private Ingredient ingredient;
     [SerializeField] private Image      ingredientImage;
     [SerializeField] private GameObject selectedPanel;
-
+    
     public IngredientMenuManager ingredientMenuManager;
 
     void Awake()

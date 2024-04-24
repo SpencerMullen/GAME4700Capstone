@@ -20,4 +20,4 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 6e10820baf2fd674f9aa3dd39cb6452e, type: 3}
   description: 
   tags: []
-  isDiscovered: 0
+  isDiscovered: 1
