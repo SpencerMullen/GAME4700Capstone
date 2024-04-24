@@ -15,6 +15,8 @@ public class MixingInventoryManager : MonoBehaviour
     [SerializeField] private GameObject drinkSpawn;
     private SpriteRenderer drinkSprite;
 
+    public Recipe currentDrink;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,8 +98,9 @@ public class MixingInventoryManager : MonoBehaviour
             Debug.Log(createdRecipe.name);
             drinkSprite.sprite = createdRecipe.image;
             drinkSpawn.SetActive(true);
-        }
-        else
+
+            currentDrink = createdRecipe;
+        } else
         {
             Debug.Log("No recipe can be created");
         }
