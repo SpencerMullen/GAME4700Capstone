@@ -14,12 +14,6 @@ public class GlossaryManager : MonoBehaviour
         menuActivated = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OpenMenu()
     {
         if (GlossaryMenu != null)
@@ -36,6 +30,26 @@ public class GlossaryManager : MonoBehaviour
                 GlossaryMenu.SetActive(true);
                 menuActivated = true;
             }
+        }
+    }
+
+    public void ChangeIngredientMenu()
+    {
+        if (menuActivated) 
+        {
+            CurrentMenu = transform.Find("IngredientMenu").gameObject;
+            GlossaryMenu.SetActive(false);
+            CurrentMenu.SetActive(true);
+        }
+    }
+
+    public void ChangeRecipeMenu()
+    {
+        if (menuActivated) 
+        {
+            CurrentMenu = transform.Find("RecipeMenu").gameObject;
+            GlossaryMenu.SetActive(false);
+            CurrentMenu.SetActive(true);
         }
     }
 }

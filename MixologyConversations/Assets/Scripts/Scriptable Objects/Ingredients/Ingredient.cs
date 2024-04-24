@@ -10,6 +10,7 @@ public class Ingredient : ScriptableObject
     public float cost;
     public int rarity; // enum?
     public string id;
+    [SerializeField] private bool unlocked;
 
     [Tooltip("Reference to the prefab that is the in-scene ingredient for mixing/display during the day cycle")]
     // public GameObject sprite;
@@ -19,4 +20,8 @@ public class Ingredient : ScriptableObject
     public List<string> flavorNames;
     public List<string> effectNames;
 
+    public bool isUnlocked() 
+    {
+        return unlocked;
+    }
 }

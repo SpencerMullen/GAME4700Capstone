@@ -17,6 +17,7 @@ MonoBehaviour:
   cost: 2
   rarity: 0
   id: lemon
+  unlocked: 0
   sprite: {fileID: 21300000, guid: ea10d71f34f7f8045bcd9252a13aa352, type: 3}
   flavorNames:
   - red

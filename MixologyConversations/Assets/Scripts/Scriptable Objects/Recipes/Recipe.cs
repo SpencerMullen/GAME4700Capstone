@@ -12,4 +12,19 @@ public class Recipe : ScriptableObject
     [SerializeField] private string description;
     [SerializeField] private List<string> tags;
     [SerializeField] private bool isDiscovered;
+
+    public bool isUnlocked()
+    {
+        return isDiscovered;
+    }
+
+    public string getDescription()
+    {
+        return description;
+    }
+
+    public List<string> getTags()
+    {
+        return tags;
+    }
 }

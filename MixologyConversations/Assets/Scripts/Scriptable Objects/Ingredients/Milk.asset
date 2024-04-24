@@ -17,6 +17,7 @@ MonoBehaviour:
   cost: 0
   rarity: 0
   id: milk
+  unlocked: 1
   sprite: {fileID: 21300000, guid: 8b2e6a021689d27439de1ab8313fc633, type: 3}
   flavorNames: []
   effectNames: []

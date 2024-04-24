@@ -42,4 +42,9 @@ public class RecipeInventory : ScriptableObject
         ingredientIds.Sort();
         return string.Join("-", ingredientIds);
     }
+
+    public List<Recipe> GetAllRecipes()
+    {
+        return recipes;
+    }
 }
