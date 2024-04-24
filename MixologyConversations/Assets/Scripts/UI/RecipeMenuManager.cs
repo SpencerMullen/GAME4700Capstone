@@ -11,7 +11,6 @@ public class RecipeMenuManager : MonoBehaviour
     public Recipe currentRecipe;
     public Recipe lockedRecipe;
  
-    private GameObject recipeDescription;
     private Image recipeImage;
     private TextMeshProUGUI recipeName;
     private TextMeshProUGUI tagDescriptionText;
@@ -19,7 +18,7 @@ public class RecipeMenuManager : MonoBehaviour
 
     void Awake() 
     {
-        recipeDescription = transform.Find("RecipeDescription").gameObject;
+        GameObject recipeDescription = this.gameObject.transform.Find("RecipeDescription").gameObject;
         GameObject topObject = recipeDescription.transform.Find("TopDescription").gameObject;
         recipeImage = topObject.transform.Find("Border").gameObject.transform.Find("ItemImage").GetComponent<Image>();
         recipeName = topObject.transform.Find("RecipeName").GetComponent<TextMeshProUGUI>();
