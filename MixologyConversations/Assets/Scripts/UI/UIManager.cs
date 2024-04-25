@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     private GameObject dimBackground;
     [SerializeField]
     private GameObject shelf;
+    [SerializeField] private GameObject RatingScreenStars;
 
     // Awake is called when the script instance is being loaded
     void Awake()
@@ -72,10 +73,21 @@ public class UIManager : MonoBehaviour
                 dimBackground.SetActive(true);
                 shelf.SetActive(true);
                 break;
+            case GameState.RATING_SCREEN:
+                Debug.Log("UI Manager Rating Screen");
+                shelf.SetActive(false);
+                dimBackground.SetActive(true);
+                RatingScreenStars.SetActive(true);
+                break;
+            case GameState.WAIT_FOR_CUSTOMER:
+                RatingScreenStars.SetActive(false);
+                dimBackground.SetActive(false);
+                break;
             default:
                 shelfPrompter.SetActive(false);
-                dimBackground.SetActive(false);
+                //dimBackground.SetActive(false);
                 shelf.SetActive(false);
+                //RatingScreenStars.SetActive(false);
                 break;
         }
     }

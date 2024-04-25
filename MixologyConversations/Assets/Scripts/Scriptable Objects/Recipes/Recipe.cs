@@ -11,7 +11,7 @@ public class Recipe : ScriptableObject
     public Sprite image;
     [SerializeField] private string description;
     [SerializeField] private List<string> tags;
-    [SerializeField] private bool isDiscovered;
+    public bool isDiscovered;
 
     public bool isUnlocked()
     {

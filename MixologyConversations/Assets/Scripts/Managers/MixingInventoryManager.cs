@@ -108,6 +108,8 @@ public class MixingInventoryManager : MonoBehaviour
             "\nTags: " + string.Join(", ", createdRecipe.getTags()));
 
             currentDrink = createdRecipe;
+
+            createdRecipe.isDiscovered = true;
         }
         else
         {

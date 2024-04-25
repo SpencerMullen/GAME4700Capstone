@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     /** Events **/
     public event Action OnDialogueComplete;
     public event Action<GameState> OnGameStateChange; // TODO: We might want to make this 2 params: prevState, and newState
+    public event Action<int> OnDrinkRating;
 
     public void DialogueComplete()
     {
@@ -35,6 +36,11 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Changing game state from " + currentGameState + " to " + newGameState);
         currentGameState = newGameState;
         if (OnGameStateChange != null) OnGameStateChange(newGameState);
+    }
+
+    public void DrinkRating(int rating)
+    {
+        if (OnDrinkRating != null) OnDrinkRating(rating);
     }
 
     private void Awake()
@@ -66,7 +72,8 @@ public class LevelManager : MonoBehaviour
     {
         Recipe currentDrink = mixingInventoryManager.currentDrink;
         int rating = characterManager.CheckDrink(currentDrink);
-        GameStateChange(GameState.WAIT_FOR_CUSTOMER);
+        DrinkRating(rating);
+        GameStateChange(GameState.RATING_SCREEN);
     }
 
     private void handleStateChange(GameState newState)
