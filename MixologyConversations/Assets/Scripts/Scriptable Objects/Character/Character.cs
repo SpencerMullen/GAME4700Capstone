@@ -16,7 +16,20 @@ public class Character : ScriptableObject
     public Sprite characterImage;
     public Sprite characterPortrait;
 
-    // Some Evaluation System Object? 
-    // public Dictionary<Rating, []Recipe> drinkEvaluation;
-    
+    public List<Recipe> threeStarDrinks;
+    public List<Recipe> twoStarDrinks;
+    public List<Recipe> oneStarDrinks;
+
+    public DrinkCriteria orderCritera;
+
+
+    public void initializeDrinkCritera()
+    {
+        orderCritera.populateFromCharacter(this);
+    }
+
+    public int getOrderRating(Recipe drinkServed)
+    {
+        return orderCritera.GetRating(drinkServed);
+    }
 }

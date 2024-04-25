@@ -27,6 +27,14 @@ public class CharacterManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        foreach (Character character in characters)
+        {
+            character.initializeDrinkCritera();
+        }
+    }
+
     public void InitializeCharacters(Character[] newCharacters) 
     {
         characters = newCharacters;
@@ -57,6 +65,6 @@ public class CharacterManager : MonoBehaviour
 
     public void CheckDrink(Recipe drink, Character character) 
     {
-        // Something with Drink Evaluation
+        int rating = character.getOrderRating(drink);
     }
 }

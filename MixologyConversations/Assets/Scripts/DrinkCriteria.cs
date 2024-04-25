@@ -13,6 +13,9 @@ public class DrinkCriteria : MonoBehaviour
     /** A dictionary mapping the recipe id to the star score **/
     public Dictionary<string, int> recipeRatingMap = new Dictionary<string, int>();
 
+    /** An optional character to populate the drink criteria from, rather than manually setting the recipe lists **/
+    public Character character;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +33,18 @@ public class DrinkCriteria : MonoBehaviour
         }
     }
 
+    /** Popualte the drink criteria lists from a character's order critera **/
+    public void populateFromCharacter(Character character)
+    {
+        populateRatingMap(character.threeStarDrinks, 3);
+        populateRatingMap(character.twoStarDrinks, 2);
+        populateRatingMap(character.oneStarDrinks, 1);
+    }
+
     public int GetRating(Recipe servedDrink)
     {
-        int score = 0;
+        int score = 1;
+        // TODO: Add check for 'disgusting drink', score should be 0
         recipeRatingMap.TryGetValue(servedDrink.title, out score);
         return score;
     }
