@@ -63,10 +63,15 @@ public class ShelfManager : MonoBehaviour
     // Add initial ingredients to the shelf
     public void InitialIngredients() {
         // Add coffee, milk, sugar, tea to unlocked
-        AddToUnlocked("coffee");
-        AddToUnlocked("milk");
-        AddToUnlocked("sugar");
-        AddToUnlocked("tea");
+        // AddToUnlocked("coffee");
+        // AddToUnlocked("milk");
+        // AddToUnlocked("sugar");
+        // AddToUnlocked("tea");
+
+        foreach (Ingredient i in playerInventory.GetIngredientInventory()) 
+        {
+            AddToUnlocked(i.id);
+        }
     }
 
     // Given an ingredient id, add to unlocked

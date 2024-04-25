@@ -23,4 +23,5 @@ public class Ingredient : ScriptableObject
     {
         return unlocked;
     }
+
 }
