@@ -64,6 +64,10 @@ public class MixingInventoryManager : MonoBehaviour
                 mixIngredients();
                 // TODO : gather ingredients and call a recipe creator class to check if it makes a recipe
                 break;
+            case "serve":
+                Debug.Log("Serving recipe");
+                LevelManager.Instance.GameStateChange(GameState.SERVING_DRINK);
+                break;
             default:
                 break;
         }
