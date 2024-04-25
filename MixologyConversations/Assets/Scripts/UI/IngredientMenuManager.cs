@@ -55,28 +55,22 @@ public class IngredientMenuManager : MonoBehaviour
         ingredientImage.color = tempColor;
         ingredientDescriptionText.SetText(currentIngredient.description);
 
-        // Flavors
-        string flavorsText = "Flavors: ";
-        foreach (string flavor in currentIngredient.flavorNames)
-        {
-            flavorsText += flavor + ", ";
-        }
-        flavorsText = flavorsText.TrimEnd(',', ' ');
+        // // Flavors
+        // string flavorsText = "Flavors: ";
+        // foreach (string flavor in currentIngredient.flavorNames)
+        // {
+        //     flavorsText += flavor + ", ";
+        // }
+        // flavorsText = flavorsText.TrimEnd(',', ' ');
 
-        // Effects
-        string effectText = "Effects: ";
-        foreach (string effect in currentIngredient.effectNames)
-        {
-            effectText += effect + ", ";
-        }
-        effectText = effectText.TrimEnd(',', ' ');
-        string ingredientTags = flavorsText + '\n' + effectText;
-        ingredients.text = ingredientTags;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // // Effects
+        // string effectText = "Effects: ";
+        // foreach (string effect in currentIngredient.effectNames)
+        // {
+        //     effectText += effect + ", ";
+        // }
+        // effectText = effectText.TrimEnd(',', ' ');
+        // string ingredientTags = flavorsText + '\n' + effectText;
+        // ingredients.text = ingredientTags;
     }
 }

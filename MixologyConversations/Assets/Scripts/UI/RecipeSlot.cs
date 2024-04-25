@@ -9,6 +9,7 @@ public class RecipeSlot : MonoBehaviour
     [SerializeField] private Recipe     recipe;
     [SerializeField] private Image      recipeImage;
     [SerializeField] private GameObject selectedPanel;
+    [SerializeField] public Recipe      lockedRecipe;
     
 
     public RecipeMenuManager recipeMenuManager;
@@ -19,19 +20,23 @@ public class RecipeSlot : MonoBehaviour
         selectedPanel = transform.Find("SelectedSlot").gameObject;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void Update()
     {
-        recipeImage.sprite = recipe.image;
+        if (recipe.isUnlocked()) 
+        {
+            recipeImage.sprite = recipe.image;
+        } 
+        else 
+        {
+            recipeImage.sprite = lockedRecipe.image;
+        }
     }
 
     // Method to set the ingredient for this slot
     public void SetRecipe(Recipe newRecipe, RecipeMenuManager manager)
     {
         recipe = newRecipe;
-        recipeImage.sprite = recipe.image;
         recipeMenuManager = manager;
-
     }
 
     // Method called when the slot is clicked
@@ -42,7 +47,14 @@ public class RecipeSlot : MonoBehaviour
         // Add your click handling logic here
         if (recipeMenuManager != null)
         {
-            recipeMenuManager.updateCurrentRecipe(recipe);
+            if (recipe.isUnlocked()) 
+            {
+                recipeMenuManager.updateCurrentRecipe(recipe);
+            } 
+            else 
+            {
+                recipeMenuManager.updateCurrentRecipe(lockedRecipe);
+            }
         }
     }
 }

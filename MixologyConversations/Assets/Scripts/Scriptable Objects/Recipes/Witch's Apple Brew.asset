@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6279c52a592acc4bba0e1506555c9bc, type: 3}
-  m_Name: Sparkling Lemonade
+  m_Name: Witch's Apple Brew
   m_EditorClassIdentifier: 
   requiredIngredients:
-  - {fileID: 11400000, guid: 82ecc8a25a708cb4b8736a2ed1741114, type: 2}
+  - {fileID: 11400000, guid: 16085c9d7965990478c6ad6d6e0cd9c7, type: 2}
+  - {fileID: 11400000, guid: a66e63526de71d04fb9c18a0fd3ec254, type: 2}
   - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
-  - {fileID: 11400000, guid: 03f50a1746215494f8a3960b3fa50a47, type: 2}
-  title: Sparkling Lemonade
-  image: {fileID: 21300000, guid: 63132ed6732a0d7429cd20a13dfd0c07, type: 3}
-  description: Zesty lemonade with a delightful fizz
+  title: Witch's Apple Brew
+  image: {fileID: 21300000, guid: caff862ef0f33864e8f251cb7bbcb4f1, type: 3}
+  description: Bewitching brew crafted from apples and mystical herbs
   tags:
-  - Sour
-  - Acidic
-  - Bittersweet
-  - Refreshing
+  - Mysterious
+  - Autumnal
+  - Crisp
+  - Wicked
   isDiscovered: 0

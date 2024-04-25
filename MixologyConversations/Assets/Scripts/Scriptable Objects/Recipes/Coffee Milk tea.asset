@@ -18,6 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1c39950b919d0148bac5c5f99ac6219, type: 2}
   title: Coffee Milk Tea
   image: {fileID: 21300000, guid: 62be9218825b5bd459aadc45d2ecc313, type: 3}
-  description: 
-  tags: []
+  description: Delightful fusion of coffee and milk tea
+  tags:
+  - Energizing
+  - Comforting
+  - Sweet
   isDiscovered: 1

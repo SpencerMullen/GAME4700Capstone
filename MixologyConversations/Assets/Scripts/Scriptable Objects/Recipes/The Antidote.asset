@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6279c52a592acc4bba0e1506555c9bc, type: 3}
-  m_Name: Sparkling Lemonade
+  m_Name: The Antidote
   m_EditorClassIdentifier: 
   requiredIngredients:
-  - {fileID: 11400000, guid: 82ecc8a25a708cb4b8736a2ed1741114, type: 2}
-  - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
+  - {fileID: 11400000, guid: 16085c9d7965990478c6ad6d6e0cd9c7, type: 2}
+  - {fileID: 11400000, guid: 435b929a8c1930d43a0b92d8482aaf1e, type: 2}
   - {fileID: 11400000, guid: 03f50a1746215494f8a3960b3fa50a47, type: 2}
-  title: Sparkling Lemonade
-  image: {fileID: 21300000, guid: 63132ed6732a0d7429cd20a13dfd0c07, type: 3}
-  description: Zesty lemonade with a delightful fizz
+  title: The Antidote
+  image: {fileID: 21300000, guid: 5305e06be53df6240a70e381f9fdc952, type: 3}
+  description: Potent elixir crafted to counteract venomous encounters
   tags:
-  - Sour
-  - Acidic
-  - Bittersweet
+  - Dangerous
+  - Immune-boosting
+  - Clarifying
   - Refreshing
+  - Spicy
   isDiscovered: 0

@@ -17,8 +17,7 @@ public class Ingredient : ScriptableObject
     public Sprite sprite;
 
     // TODO: Effects and flavors - these likely should be a separate enum rather than just string, or maybe even their own classes
-    public List<string> flavorNames;
-    public List<string> effectNames;
+    public List<string> tags;
 
     public bool isUnlocked() 
     {

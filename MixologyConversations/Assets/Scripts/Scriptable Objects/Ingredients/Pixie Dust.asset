@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Pixie Dust
   m_EditorClassIdentifier: 
   ingredientName: Pixie Dust
-  description: 
-  cost: 0
-  rarity: 0
-  id: 
+  description: Magical shimmering powder said to grant wishes
+  cost: 3
+  rarity: 2
+  id: pixie
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: 84f64cd8cacebd54484f45269dba486e, type: 3}
+  tags:
+  - Sweet
+  - Lucky

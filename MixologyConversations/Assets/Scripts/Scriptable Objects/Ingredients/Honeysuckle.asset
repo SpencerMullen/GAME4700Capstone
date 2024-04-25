@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Honeysuckle
   m_EditorClassIdentifier: 
   ingredientName: Honeysuckle
-  description: 
-  cost: 0
-  rarity: 0
-  id: 
+  description: Fragrant flower known for its sweet nectar
+  cost: 2
+  rarity: 1
+  id: honeysuckle
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: 2c8d73d5669277f43b6725dc2338e6fc, type: 3}
+  tags:
+  - Floral

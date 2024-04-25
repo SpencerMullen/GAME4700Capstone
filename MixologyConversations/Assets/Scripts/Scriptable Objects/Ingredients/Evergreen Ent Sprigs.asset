@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Evergreen Ent Sprigs
   m_EditorClassIdentifier: 
   ingredientName: Evergreen Ent Sprigs
-  description: 
-  cost: 0
-  rarity: 0
-  id: 
+  description: Fragrant sprigs from mystical trees
+  cost: 3
+  rarity: 1
+  id: evergreen
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: f4a1073ceaa4dc141ae091108681035b, type: 3}
+  tags:
+  - Minty
+  - Woody
+  - Refreshing

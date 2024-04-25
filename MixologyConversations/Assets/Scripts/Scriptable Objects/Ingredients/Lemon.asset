@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Lemon
   m_EditorClassIdentifier: 
   ingredientName: Lemon
-  description: 
+  description: Tangy citrus fruit used to add acidity and freshness
   cost: 2
   rarity: 0
   id: lemon
   unlocked: 0
   sprite: {fileID: 21300000, guid: ea10d71f34f7f8045bcd9252a13aa352, type: 3}
-  flavorNames:
-  - red
-  effectNames: []
+  tags:
+  - Sour
+  - Acidic
