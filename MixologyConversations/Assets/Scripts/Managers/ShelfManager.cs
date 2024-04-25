@@ -125,7 +125,7 @@ public class ShelfManager : MonoBehaviour
         spawned.GetComponent<SpriteRenderer>().sprite = ingredient.sprite;
         // Set the ingredient data of spawned equal to the ingredient
         spawned.GetComponent<SpawnOnClick>().SetIngredientData(ingredient);
-        // Set the ingredient tooltip equal to the ingredient description
-        spawned.GetComponent<HoverTooltip>().SetTooltip(ingredient.description);
+        // Set the ingredient tooltip equal to the ingredient name, next line description, last line tags
+        spawned.GetComponent<HoverTooltip>().SetTooltip(ingredient.name + "\n" + ingredient.description + "\nTags: " + string.Join(", ", ingredient.tags));
     }
 }

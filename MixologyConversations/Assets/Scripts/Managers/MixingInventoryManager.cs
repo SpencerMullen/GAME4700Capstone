@@ -103,8 +103,13 @@ public class MixingInventoryManager : MonoBehaviour
             drinkSprite.sprite = createdRecipe.image;
             drinkSpawn.SetActive(true);
 
+            // Set the drinkspawn's hover tooltip to the recipe's title, next line description, next line tags
+            drinkSpawn.GetComponent<HoverTooltip>().SetTooltip(createdRecipe.title + "\n" + createdRecipe.getDescription() +
+            "\nTags: " + string.Join(", ", createdRecipe.getTags()));
+
             currentDrink = createdRecipe;
-        } else
+        }
+        else
         {
             Debug.Log("No recipe can be created");
         }
