@@ -15,4 +15,29 @@ MonoBehaviour:
   levelName: Level1
   characters:
   - {fileID: 11400000, guid: 16310bdd923479443bd41d7f57a08c57, type: 2}
+  - {fileID: 11400000, guid: 17d7e6bd0f1e3f84f912ba40c7de3975, type: 2}
+  - {fileID: 11400000, guid: d89090ccecf17ff4a9938d30e2fd49f8, type: 2}
+  - {fileID: 11400000, guid: 81e8dd2a2a3b1bd468d7132daa206ae1, type: 2}
+  - {fileID: 11400000, guid: b390a23465713464595b3ccc647eac0a, type: 2}
+  - {fileID: 11400000, guid: d44fa085e046ae94fa679aebf0d86b09, type: 2}
+  - {fileID: 11400000, guid: 1e1d1f6e1e1d5ac49a8e20b1c7986cc6, type: 2}
+  - {fileID: 11400000, guid: da79649d83394be4cb426ebdff76f25f, type: 2}
+  - {fileID: 11400000, guid: 03e7f2ce9a0ac6346a907585913f1324, type: 2}
+  - {fileID: 11400000, guid: ebb22a19b57be6a4d8168d491746fc6f, type: 2}
+  - {fileID: 11400000, guid: 2cb741ba9a5a2f942882e04cf692382e, type: 2}
+  - {fileID: 11400000, guid: 27117c821c8276248825d70bddfb2cfb, type: 2}
+  - {fileID: 11400000, guid: 2cd2ed8fb8aac07419144674792bc3fb, type: 2}
+  - {fileID: 11400000, guid: 2cb741ba9a5a2f942882e04cf692382e, type: 2}
+  - {fileID: 11400000, guid: d82388030eb229747b71bbf1631d3b6f, type: 2}
+  - {fileID: 11400000, guid: 1be0841fd89de9f4b9b8dd0f43419efc, type: 2}
+  - {fileID: 11400000, guid: aff64c8c7bb01304199fae196dfc7138, type: 2}
+  - {fileID: 11400000, guid: 8d37e913eacd1fa45afadc6dbcf3d2fa, type: 2}
+  - {fileID: 11400000, guid: 52a467e46e63cc3408ec2d525a8f6377, type: 2}
+  - {fileID: 11400000, guid: 27227332e5cdfab41ab5a5dd91f3d637, type: 2}
+  - {fileID: 11400000, guid: 851a9b0341e3cd5469cb10dcf443176a, type: 2}
+  - {fileID: 11400000, guid: 09e2a96eac163fb45a540bde6e87a49f, type: 2}
+  - {fileID: 11400000, guid: 5c678661274b6e142bb27e6a4a987f9c, type: 2}
+  - {fileID: 11400000, guid: d841b727aad9c494190474d58480524f, type: 2}
+  - {fileID: 11400000, guid: 79433e7f2ffbb8b4ca6d8b2bdc1294f4, type: 2}
+  - {fileID: 11400000, guid: 5a5a5d84fe8295848868e78286f98735, type: 2}
   unlockedIngredient: {fileID: 0}

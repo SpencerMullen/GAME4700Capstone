@@ -31,11 +31,6 @@ public class CharacterManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (Character character in characters)
-        {
-            character.initializeDrinkCritera();
-        }
-
         LevelManager.Instance.OnGameStateChange += handleStateChange;
         LevelManager.Instance.OnDialogueComplete += OnDialogueComplete;
     }
@@ -44,6 +39,12 @@ public class CharacterManager : MonoBehaviour
     {
         characters = newCharacters;
         currentCharacterIndex = 0;
+        foreach (Character character in characters)
+        {
+            Debug.Log("Character: " + character.characterName);
+            character.initializeDrinkCritera();
+        }
+
         this.NextCharacter();
     }
 

@@ -16,9 +16,9 @@ public class Character : ScriptableObject
     public Sprite characterImage;
     public Sprite characterPortrait;
 
-    public List<Recipe> threeStarDrinks;
-    public List<Recipe> twoStarDrinks;
-    public List<Recipe> oneStarDrinks;
+    public List<Recipe> threeStarDrinks = new List<Recipe>();
+    public List<Recipe> twoStarDrinks = new List<Recipe>();
+    public List<Recipe> oneStarDrinks = new List<Recipe>();
 
     public DrinkCriteria orderCritera;
 

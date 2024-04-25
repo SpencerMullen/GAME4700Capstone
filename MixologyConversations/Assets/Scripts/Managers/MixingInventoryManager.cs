@@ -31,6 +31,7 @@ public class MixingInventoryManager : MonoBehaviour
      */
     public bool addIngredient(GameObject ingredientPrefab, Ingredient ingredientData)
     {
+        clearDrinkSpawn();
         Debug.Log("Passed object ID: " + ingredientPrefab.GetInstanceID());
         if (nextSpotIndex < maxIngredients)
         {
@@ -66,6 +67,7 @@ public class MixingInventoryManager : MonoBehaviour
                 break;
             case "serve":
                 Debug.Log("Serving recipe");
+                clearDrinkSpawn();
                 LevelManager.Instance.GameStateChange(GameState.SERVING_DRINK);
                 // Disable the tooltip
                 TooltipManager.instance.HideTooltip();
