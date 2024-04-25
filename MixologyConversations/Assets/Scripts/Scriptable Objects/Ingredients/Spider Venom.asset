@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Spider Venom
   m_EditorClassIdentifier: 
   ingredientName: Spider Venom
-  description: 
-  cost: 0
-  rarity: 0
-  id: 
+  description: Potent toxin extracted from arachnids, not for consumption!
+  cost: 4
+  rarity: 2
+  id: spider
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: 347bfe104f8f278499f07cdb667c088e, type: 3}
+  tags:
+  - Bitter
+  - Dangerous

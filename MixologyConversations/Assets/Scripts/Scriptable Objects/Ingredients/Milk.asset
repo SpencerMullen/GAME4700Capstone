@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Milk
   m_EditorClassIdentifier: 
   ingredientName: Milk
-  description: 
-  cost: 0
+  description: Creamy liquid often added to beverages for richness
+  cost: 2
   rarity: 0
   id: milk
   unlocked: 1
   sprite: {fileID: 21300000, guid: 8b2e6a021689d27439de1ab8313fc633, type: 3}
-  flavorNames: []
-  effectNames: []
+  tags:
+  - Cooling

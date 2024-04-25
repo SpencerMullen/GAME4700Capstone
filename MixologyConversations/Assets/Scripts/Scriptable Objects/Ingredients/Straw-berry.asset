@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Straw-berry
   m_EditorClassIdentifier: 
   ingredientName: Straw-berry
-  description: 
-  cost: 0
+  description: Juicy red fruit prized for its sweetness
+  cost: 2
   rarity: 0
-  id: 
+  id: strawberry
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: 0930a6f566f7ba64cbabad2abcbcd9b2, type: 3}
+  tags:
+  - Sweet

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Chocolate
   m_EditorClassIdentifier: 
   ingredientName: Chocolate
-  description: 
+  description: Decadent confection made from cacao beans
   cost: 2
   rarity: 0
-  id: 
+  id: chocolate
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: a506ccaa22b67174d88dc209de894cc2, type: 3}
+  tags:
+  - Sweet
+  - Rich

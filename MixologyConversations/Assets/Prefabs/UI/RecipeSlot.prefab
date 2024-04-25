@@ -151,6 +151,7 @@ MonoBehaviour:
   recipe: {fileID: 0}
   recipeImage: {fileID: 0}
   selectedPanel: {fileID: 0}
+  lockedRecipe: {fileID: 11400000, guid: f26becb825712d04bb3597c53577b852, type: 2}
   recipeMenuManager: {fileID: 0}
 --- !u!1 &6924361327327063539
 GameObject:

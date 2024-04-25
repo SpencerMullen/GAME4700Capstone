@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Ginger
   m_EditorClassIdentifier: 
   ingredientName: Ginger
-  description: 
-  cost: 0
-  rarity: 0
-  id: 
+  description: Spicy root known for medicinal properties
+  cost: 3
+  rarity: 1
+  id: ginger
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: 75c13641a35d28c4c81119ce1735e059, type: 3}
+  tags:
+  - Spicy

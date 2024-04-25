@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6279c52a592acc4bba0e1506555c9bc, type: 3}
-  m_Name: Triple Shot
+  m_Name: Luck o' the Spiderish
   m_EditorClassIdentifier: 
   requiredIngredients:
+  - {fileID: 11400000, guid: b8a9bfb23e7157a438f7629810751d8c, type: 2}
+  - {fileID: 11400000, guid: 16085c9d7965990478c6ad6d6e0cd9c7, type: 2}
   - {fileID: 11400000, guid: a1c39950b919d0148bac5c5f99ac6219, type: 2}
-  - {fileID: 11400000, guid: a1c39950b919d0148bac5c5f99ac6219, type: 2}
-  - {fileID: 11400000, guid: a1c39950b919d0148bac5c5f99ac6219, type: 2}
-  title: Triple Shot
-  image: {fileID: 21300000, guid: 0a1f716c5ec694640a6f9285b4bbc947, type: 3}
-  description: Intense espresso kickstarter
+  title: Luck o' the Spiderish
+  image: {fileID: 21300000, guid: d6bf74f49dde2784eb9c92a2a31520bc, type: 3}
+  description: Mysterious concoction promising luck and adventure
   tags:
-  - Super-Energizing
+  - Lucky
+  - Sweet
+  - Energizing
   isDiscovered: 0

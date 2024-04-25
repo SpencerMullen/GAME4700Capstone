@@ -9,7 +9,6 @@ public class RecipeMenuManager : MonoBehaviour
     public GameObject RecipeSlotPrefab; 
     public RecipeInventory Inventory; 
     public Recipe currentRecipe;
-    public Recipe lockedRecipe;
  
     private GameObject recipeDescription;
     private Image recipeImage;
@@ -35,14 +34,7 @@ public class RecipeMenuManager : MonoBehaviour
         {
             GameObject newSlot = Instantiate(RecipeSlotPrefab, transform.position, Quaternion.identity);
             RecipeSlot recipeSlot = newSlot.GetComponent<RecipeSlot>();
-            if (r.isUnlocked())
-            {
-                recipeSlot.SetRecipe(r, this);
-            }
-            else 
-            {
-                recipeSlot.SetRecipe(lockedRecipe, this);
-            }
+            recipeSlot.SetRecipe(r, this);
             Transform correctParent = transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0);
             newSlot.transform.SetParent(correctParent);
         }

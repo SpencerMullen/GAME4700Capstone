@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Tea Leaves
   m_EditorClassIdentifier: 
   ingredientName: Tea Leaves
-  description: 
+  description: Aromatic leaves brewed for a calming beverage
   cost: 2
   rarity: 0
   id: tea
   unlocked: 1
   sprite: {fileID: 21300000, guid: ac3e9974381ad1d468d5fa214ccb3439, type: 3}
-  flavorNames:
-  - blue
-  effectNames: []
+  tags:
+  - Herbal

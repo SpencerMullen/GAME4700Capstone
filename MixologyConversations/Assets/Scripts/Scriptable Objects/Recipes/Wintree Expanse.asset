@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6279c52a592acc4bba0e1506555c9bc, type: 3}
-  m_Name: Sparkling Lemonade
+  m_Name: Wintree Expanse
   m_EditorClassIdentifier: 
   requiredIngredients:
-  - {fileID: 11400000, guid: 82ecc8a25a708cb4b8736a2ed1741114, type: 2}
+  - {fileID: 11400000, guid: d9ac6f37ce038b845a95a557f2f5cf13, type: 2}
+  - {fileID: 11400000, guid: 983573a630a20f341b611b4f2ba0ca22, type: 2}
   - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
-  - {fileID: 11400000, guid: 03f50a1746215494f8a3960b3fa50a47, type: 2}
-  title: Sparkling Lemonade
-  image: {fileID: 21300000, guid: 63132ed6732a0d7429cd20a13dfd0c07, type: 3}
-  description: Zesty lemonade with a delightful fizz
+  title: Wintree Expanse
+  image: {fileID: 21300000, guid: 47612d113e6511b428882264eb56c510, type: 3}
+  description: Cool and refreshing beverage inspired by nature
   tags:
-  - Sour
-  - Acidic
-  - Bittersweet
-  - Refreshing
+  - Comforting
+  - 'Earthy '
+  - Herbal
   isDiscovered: 0

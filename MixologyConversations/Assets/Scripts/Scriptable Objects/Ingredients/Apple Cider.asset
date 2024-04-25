@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Apple Cider
   m_EditorClassIdentifier: 
   ingredientName: Apple Cider
-  description: 
-  cost: 0
-  rarity: 0
-  id: 
+  description: Refreshing beverage made from fermented apples
+  cost: 3
+  rarity: 1
+  id: apple
   unlocked: 0
-  sprite: {fileID: 0}
-  flavorNames: []
-  effectNames: []
+  sprite: {fileID: 21300000, guid: c204fe3d16fee364296c49712c81629d, type: 3}
+  tags:
+  - Spicy
+  - Sweet

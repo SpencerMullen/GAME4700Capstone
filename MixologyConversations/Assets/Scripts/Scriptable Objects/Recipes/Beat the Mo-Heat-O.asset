@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6279c52a592acc4bba0e1506555c9bc, type: 3}
-  m_Name: Sparkling Lemonade
+  m_Name: Beat the Mo-Heat-O
   m_EditorClassIdentifier: 
   requiredIngredients:
   - {fileID: 11400000, guid: 82ecc8a25a708cb4b8736a2ed1741114, type: 2}
-  - {fileID: 11400000, guid: 3f69b29876870fd4aba326dccf48a433, type: 2}
-  - {fileID: 11400000, guid: 03f50a1746215494f8a3960b3fa50a47, type: 2}
-  title: Sparkling Lemonade
-  image: {fileID: 21300000, guid: 63132ed6732a0d7429cd20a13dfd0c07, type: 3}
-  description: Zesty lemonade with a delightful fizz
+  - {fileID: 11400000, guid: 983573a630a20f341b611b4f2ba0ca22, type: 2}
+  - {fileID: 11400000, guid: aac4fb1bb26523442a5eb7f76969b18f, type: 2}
+  title: Beat the Mo-Heat-O
+  image: {fileID: 21300000, guid: 79f379471a00e834ca5789fc12d0b11a, type: 3}
+  description: Refreshing drink designed to combat summer heat
   tags:
-  - Sour
-  - Acidic
-  - Bittersweet
   - Refreshing
+  - Herbal
+  - Summery
+  - Bright
   isDiscovered: 0
