@@ -61,6 +61,8 @@ public class CharacterManager : MonoBehaviour
         DialogueTrigger dialogueTrigger = newCharacter.GetComponent<DialogueTrigger>();
         spriteRenderer.sprite = currentCharacter.characterImage;
         dialogueTrigger.updateDialogueFields(currentCharacter.dialogue, currentCharacter.characterPortrait, currentCharacter.nameTag);
+
+        LevelManager.Instance.GameStateChange(GameState.WAIT_FOR_CLICK);
     }
 
     public void CheckDrink(Recipe drink, Character character) 

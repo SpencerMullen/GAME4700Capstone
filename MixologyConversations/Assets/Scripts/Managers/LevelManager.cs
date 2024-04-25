@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,24 @@ public class LevelManager : MonoBehaviour
     private Character currentCharacter;
     private Recipe currentRecipe;
 
+    private GameState currentGameState;
+
+
+    /** Events **/
+    public event Action OnDialogueComplete;
+    public event Action<GameState> OnGameStateChange;
+
+    public void DialogueComplete()
+    {
+        if (OnDialogueComplete != null) OnDialogueComplete();
+    }
+
+    public void GameStateChange(GameState newGameState)
+    {
+        currentGameState = newGameState;
+        if (OnGameStateChange != null) OnGameStateChange(newGameState);
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -26,6 +45,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         InitializeLevel(currentLevelIndex);
+        currentGameState = GameState.WAIT_FOR_CUSTOMER;
     }
 
     private void InitializeLevel(int levelIndex)
