@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75141f80198e7048993debc00d6598e, type: 3}
+  m_Name: Row021
+  m_EditorClassIdentifier: 
+  characterName: 
+  description: 
+  id: 
+  nameTag: 
+  dialogue: {fileID: 4900000, guid: 825ce5639ddc24b40aa16c5982eae3d7, type: 3}
+  characterImage: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  threeStarDrinks:
+  - {fileID: 11400000, guid: 0f12963464cfce14c9808dc72b5b99e7, type: 2}
+  twoStarDrinks: []
+  oneStarDrinks: []

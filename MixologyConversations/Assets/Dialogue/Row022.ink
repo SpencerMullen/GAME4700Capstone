@@ -1,0 +1,1 @@
+Something sparkly, lucky, and a little glamourous for me.
