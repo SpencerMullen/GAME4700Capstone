@@ -19,6 +19,10 @@ public class UIManager : MonoBehaviour
     // Shelf Prompter button
     [SerializeField]
     private GameObject shelfPrompter;
+    [SerializeField]
+    private GameObject dimBackground;
+    [SerializeField]
+    private GameObject shelf;
 
     // Awake is called when the script instance is being loaded
     void Awake()
@@ -32,14 +36,13 @@ public class UIManager : MonoBehaviour
             Debug.LogWarning("WARNING: Another instance of UIManager already exists.");
         }
 
-        // Register for events
-        LevelManager.Instance.OnGameStateChange += handleGameStateChange;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Register for events
+        LevelManager.Instance.OnGameStateChange += handleGameStateChange;
     }
 
     // Update is called once per frame
@@ -62,10 +65,17 @@ public class UIManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.WAIT_FOR_MIXING_TABLE:
-                shelfPrompter.SetActive(true);
+                // shelfPrompter.SetActive(true);
+                LevelManager.Instance.GameStateChange(GameState.IN_MIXING_TABLE);
+                break;
+            case GameState.IN_MIXING_TABLE:
+                dimBackground.SetActive(true);
+                shelf.SetActive(true);
                 break;
             default:
                 shelfPrompter.SetActive(false);
+                dimBackground.SetActive(false);
+                shelf.SetActive(false);
                 break;
         }
     }

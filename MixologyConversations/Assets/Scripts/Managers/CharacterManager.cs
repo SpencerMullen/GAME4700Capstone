@@ -16,6 +16,7 @@ public class CharacterManager : MonoBehaviour
     DialogueTrigger dialogueTrigger;
 
 
+
     // Maybe Story Character fields 
     // public StoryCharacters[] storyCharacters;
 
@@ -100,9 +101,10 @@ public class CharacterManager : MonoBehaviour
         LevelManager.Instance.GameStateChange(GameState.WAIT_FOR_CUSTOMER);
     }
 
-    public void CheckDrink(Recipe drink, Character character) 
+    public int CheckDrink(Recipe drink) 
     {
-        int rating = character.getOrderRating(drink);
-
+        int rating = currentCharacter.getOrderRating(drink);
+        Debug.Log(rating + " stars");
+        return rating;
     }
 }
