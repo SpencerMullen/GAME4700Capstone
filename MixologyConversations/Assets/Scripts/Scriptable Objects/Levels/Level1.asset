@@ -29,15 +29,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cd2ed8fb8aac07419144674792bc3fb, type: 2}
   - {fileID: 11400000, guid: 2cb741ba9a5a2f942882e04cf692382e, type: 2}
   - {fileID: 11400000, guid: d82388030eb229747b71bbf1631d3b6f, type: 2}
-  - {fileID: 11400000, guid: 1be0841fd89de9f4b9b8dd0f43419efc, type: 2}
-  - {fileID: 11400000, guid: aff64c8c7bb01304199fae196dfc7138, type: 2}
-  - {fileID: 11400000, guid: 8d37e913eacd1fa45afadc6dbcf3d2fa, type: 2}
-  - {fileID: 11400000, guid: 52a467e46e63cc3408ec2d525a8f6377, type: 2}
-  - {fileID: 11400000, guid: 27227332e5cdfab41ab5a5dd91f3d637, type: 2}
-  - {fileID: 11400000, guid: 851a9b0341e3cd5469cb10dcf443176a, type: 2}
-  - {fileID: 11400000, guid: 09e2a96eac163fb45a540bde6e87a49f, type: 2}
-  - {fileID: 11400000, guid: 5c678661274b6e142bb27e6a4a987f9c, type: 2}
-  - {fileID: 11400000, guid: d841b727aad9c494190474d58480524f, type: 2}
-  - {fileID: 11400000, guid: 79433e7f2ffbb8b4ca6d8b2bdc1294f4, type: 2}
-  - {fileID: 11400000, guid: 5a5a5d84fe8295848868e78286f98735, type: 2}
   unlockedIngredient: {fileID: 0}
