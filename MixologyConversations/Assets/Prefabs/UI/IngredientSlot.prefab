@@ -95,6 +95,7 @@ MonoBehaviour:
   ingredient: {fileID: 0}
   ingredientImage: {fileID: 0}
   selectedPanel: {fileID: 0}
+  lockedIngredient: {fileID: 11400000, guid: ed2f28be217135945906e1c944a0c5c0, type: 2}
   ingredientMenuManager: {fileID: 0}
 --- !u!114 &-8832086077721942123
 MonoBehaviour:

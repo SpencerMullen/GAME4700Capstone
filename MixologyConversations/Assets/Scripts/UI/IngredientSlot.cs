@@ -8,6 +8,7 @@ public class IngredientSlot : MonoBehaviour
     [SerializeField] private Ingredient ingredient;
     [SerializeField] private Image      ingredientImage;
     [SerializeField] private GameObject selectedPanel;
+    [SerializeField] public  Ingredient lockedIngredient;
     
     public IngredientMenuManager ingredientMenuManager;
 
@@ -17,25 +18,24 @@ public class IngredientSlot : MonoBehaviour
         selectedPanel = transform.Find("SelectedSlot").gameObject;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void Update()
     {
-        ingredientImage.sprite = ingredient.sprite;
+        if (ingredient.isUnlocked()) 
+        {
+            ingredientImage.sprite = ingredient.sprite;
+        } 
+        else 
+        {
+            ingredientImage.sprite = lockedIngredient.sprite;
+        }
     }
 
     // Method to set the ingredient for this slot
     public void SetIngredient(Ingredient newIngredient, IngredientMenuManager manager)
     {
         ingredient = newIngredient;
-        ingredientImage.sprite = ingredient.sprite;
         ingredientMenuManager = manager;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {   
-        
     }
 
     // Method called when the slot is clicked
@@ -46,7 +46,14 @@ public class IngredientSlot : MonoBehaviour
         // Add your click handling logic here
         if (ingredientMenuManager != null)
         {
-            ingredientMenuManager.updateCurrentIngredient(ingredient);
+            if (ingredient.isUnlocked()) 
+            {
+                ingredientMenuManager.updateCurrentIngredient(ingredient);
+            } 
+            else 
+            {
+                ingredientMenuManager.updateCurrentIngredient(lockedIngredient);
+            }
         }
     }
 }
