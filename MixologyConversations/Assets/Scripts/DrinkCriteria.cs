@@ -43,9 +43,9 @@ public class DrinkCriteria : MonoBehaviour
 
     public int GetRating(Recipe servedDrink)
     {
-        int score = 1;
         // TODO: Add check for 'disgusting drink', score should be 0
-        recipeRatingMap.TryGetValue(servedDrink.title, out score);
+        recipeRatingMap.TryGetValue(servedDrink.title, out int score);
+        if (score == 0) score = 1;
         return score;
     }
 }

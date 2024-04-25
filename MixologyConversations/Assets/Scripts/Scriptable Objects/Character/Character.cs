@@ -25,6 +25,7 @@ public class Character : ScriptableObject
 
     public void initializeDrinkCritera()
     {
+        orderCritera = new DrinkCriteria();
         orderCritera.populateFromCharacter(this);
     }
 
