@@ -12,7 +12,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Level[]                levels;
 
     [SerializeField] private int currentLevelIndex = 0;
-    private int currentCharacterIndex = 0;
     private Character currentCharacter;
     private Recipe currentRecipe;
 
@@ -29,34 +28,24 @@ public class LevelManager : MonoBehaviour
         InitializeLevel(currentLevelIndex);
     }
 
-    void Update()
-    {
-        // While Level is Playing Do these things
-        // - Allow Dialogue from currentCharacter (clicking on currentCharacter) And stop scene to play dialogue
-        // - Mixing and Giving Recipe to Character 
-        // - Once Given - Return a drinkRating and display the rating or satsification with dialogue or some other form
-        // - Once the day is over, use HandleNextCustomer
-        // 
-    }
-
     private void InitializeLevel(int levelIndex)
     {
         if (levelIndex >= 0 && levelIndex < levels.Length)
         {
             characterManager.InitializeCharacters(levels[levelIndex].characters);
-            currentCharacter = characterManager.NextCharacter(currentCharacterIndex);
+            // currentCharacter = characterManager.NextCharacter();
         }
     }
 
-    private void HandleNextCustomer(int characterIndex)
-    {
-        currentCharacterIndex += 1;
-        currentCharacter = characterManager.NextCharacter(currentCharacterIndex);
-        if (currentCharacter == null)
-        {
-            HandleLevelEnding(); 
-        }
-    }
+    // private void HandleNextCustomer()
+    // {
+    //     currentCharacterIndex += 1;
+    //     currentCharacter = characterManager.NextCharacter();
+    //     if (currentCharacter == null)
+    //     {
+    //         HandleLevelEnding(); 
+    //     }
+    // }
 
     private void HandleLevelEnding()
     {

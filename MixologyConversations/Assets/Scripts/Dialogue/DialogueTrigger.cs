@@ -24,4 +24,11 @@ public class DialogueTrigger : MonoBehaviour
             DialogueManager.Instance.EnterDialogueMode(inkJSON, characterPortrait, nametag);
         }
     }
+
+    public void updateDialogueFields(TextAsset dialogue, Sprite character, string names)
+    {
+        inkJSON = dialogue;
+        characterPortrait = character;
+        nametag = names;
+    }
 }
