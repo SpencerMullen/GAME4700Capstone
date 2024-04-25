@@ -11,10 +11,15 @@ public class DrinkCriteria
     public List<Recipe> oneStarRecipes = new List<Recipe>();
 
     /** A dictionary mapping the recipe id to the star score **/
-    public Dictionary<string, int> recipeRatingMap = new Dictionary<string, int>();
+    public Dictionary<string, int> recipeRatingMap;
 
     /** An optional character to populate the drink criteria from, rather than manually setting the recipe lists **/
     public Character character;
+
+    public DrinkCriteria()
+    {
+        recipeRatingMap = new Dictionary<string, int>();
+    }
 
 
     void populateRatings()
@@ -42,6 +47,7 @@ public class DrinkCriteria
 
     public int GetRating(Recipe servedDrink)
     {
+        Debug.Log(servedDrink.title);
         // TODO: Add check for 'disgusting drink', score should be 0
         recipeRatingMap.TryGetValue(servedDrink.title, out int score);
         if (score == 0) score = 1;

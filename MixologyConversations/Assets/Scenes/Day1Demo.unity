@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &98202238 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7264754545219529024, guid: 238cb77441d5da846894fbbb09b01ac1, type: 3}
-  m_PrefabInstance: {fileID: 1998281061}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &102004640
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +451,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6333973137350346614, guid: 44d838f7162400b479d730d104015c1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036146859}
   m_SourcePrefab: {fileID: 100100000, guid: 44d838f7162400b479d730d104015c1c, type: 3}
 --- !u!1 &586369802
 GameObject:
@@ -551,11 +549,6 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9032967437686349809, guid: 8ee7fd2a58549ce4785f1b79f2f25596, type: 3}
   m_PrefabInstance: {fileID: 1596835239}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &617982220 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5636146875384730071, guid: 238cb77441d5da846894fbbb09b01ac1, type: 3}
-  m_PrefabInstance: {fileID: 1998281061}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &722205713
 PrefabInstance:
@@ -758,11 +751,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1152603183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7389519477589726645, guid: 238cb77441d5da846894fbbb09b01ac1, type: 3}
-  m_PrefabInstance: {fileID: 1998281061}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1191673750
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +984,7 @@ PrefabInstance:
     - target: {fileID: 8203346269966989471, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
       propertyPath: drinkSpawn
       value: 
-      objectReference: {fileID: 1152603183}
+      objectReference: {fileID: 0}
     - target: {fileID: 8203346269966989471, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
       propertyPath: maxIngredients
       value: 3
@@ -1012,11 +1000,11 @@ PrefabInstance:
     - target: {fileID: 8203346269966989471, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
       propertyPath: mixingSpots.Array.data[1].spotPos
       value: 
-      objectReference: {fileID: 98202238}
+      objectReference: {fileID: 0}
     - target: {fileID: 8203346269966989471, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
       propertyPath: mixingSpots.Array.data[2].spotPos
       value: 
-      objectReference: {fileID: 617982220}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1484,3 +1472,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 238cb77441d5da846894fbbb09b01ac1, type: 3}
+--- !u!1 &2036146858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6333973137350346614, guid: 44d838f7162400b479d730d104015c1c, type: 3}
+  m_PrefabInstance: {fileID: 448401948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2036146859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036146858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2888d462e2bd0f42b5a72f31d1239bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeInventory: {fileID: 11400000, guid: 9e6eb37ac1df2bb4fad4101962759239, type: 2}

@@ -43,6 +43,8 @@ public class LevelManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        OnGameStateChange += handleStateChange;
     }
 
     void Start()
@@ -65,6 +67,18 @@ public class LevelManager : MonoBehaviour
         Recipe currentDrink = mixingInventoryManager.currentDrink;
         int rating = characterManager.CheckDrink(currentDrink);
         GameStateChange(GameState.WAIT_FOR_CUSTOMER);
+    }
+
+    private void handleStateChange(GameState newState)
+    {
+        switch (newState)
+        {
+            case GameState.SERVING_DRINK:
+                CompleteOrder();
+                break;
+            default:
+                break;
+        }
     }
 
     // private void HandleNextCustomer()
