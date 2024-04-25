@@ -13,6 +13,17 @@ public class TooltipManager : MonoBehaviour
     public static Action<string, Vector2> OnMouseHover;
     public static Action OnMouseLoseFocus;
 
+    // Instance
+    public static TooltipManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     private void OnEnable()
     {
         OnMouseHover += ShowTooltip;
@@ -44,7 +55,7 @@ public class TooltipManager : MonoBehaviour
         tooltipWindow.position = new Vector2(Input.mousePosition.x + tooltipWindow.sizeDelta.x / 2 + 10, Input.mousePosition.y);
     }
 
-    private void HideTooltip()
+    public void HideTooltip()
     {
         // Debug.Log("Hiding tooltip");
         tooltipText.text = "";

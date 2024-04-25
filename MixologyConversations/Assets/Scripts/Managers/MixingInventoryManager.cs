@@ -67,6 +67,8 @@ public class MixingInventoryManager : MonoBehaviour
             case "serve":
                 Debug.Log("Serving recipe");
                 LevelManager.Instance.GameStateChange(GameState.SERVING_DRINK);
+                // Disable the tooltip
+                TooltipManager.instance.HideTooltip();
                 break;
             default:
                 break;
