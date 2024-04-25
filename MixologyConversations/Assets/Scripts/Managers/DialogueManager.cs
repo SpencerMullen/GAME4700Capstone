@@ -94,6 +94,8 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        LevelManager.Instance.DialogueComplete();
     }
 
     private void ContinueStory()

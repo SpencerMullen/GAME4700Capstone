@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class DrinkCriteria : MonoBehaviour
+public class DrinkCriteria
 {
     // These are exposed just for easy setting in the editor; the actual searching is done via Dictionary
     public List<Recipe> threeStarRecipes = new List<Recipe>();
@@ -17,8 +17,7 @@ public class DrinkCriteria : MonoBehaviour
     public Character character;
 
 
-    // Start is called before the first frame update
-    void Start()
+    void populateRatings()
     {
         populateRatingMap(threeStarRecipes, 3);
         populateRatingMap(twoStarRecipes, 2);

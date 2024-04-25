@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
 
     /** Events **/
     public event Action OnDialogueComplete;
-    public event Action<GameState> OnGameStateChange;
+    public event Action<GameState> OnGameStateChange; // TODO: We might want to make this 2 params: prevState, and newState
 
     public void DialogueComplete()
     {
@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
 
     public void GameStateChange(GameState newGameState)
     {
+        Debug.Log("Changing game state from " + currentGameState + " to " + newGameState);
         currentGameState = newGameState;
         if (OnGameStateChange != null) OnGameStateChange(newGameState);
     }
