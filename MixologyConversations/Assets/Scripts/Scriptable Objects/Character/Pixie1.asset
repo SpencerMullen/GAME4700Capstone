@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75141f80198e7048993debc00d6598e, type: 3}
+  m_Name: Pixie1
+  m_EditorClassIdentifier: 
+  characterName: Sally
+  description: 
+  id: 
+  nameTag: 
+  dialogue: {fileID: 4900000, guid: 253f6b85645ce3f48aef85a537507d29, type: 3}
+  characterImage: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  threeStarDrinks:
+  - {fileID: 11400000, guid: 365e86fac78de9340a47c48ec381d835, type: 2}
+  twoStarDrinks:
+  - {fileID: 11400000, guid: 9747b894c8c92f148b287bd6d1518aee, type: 2}
+  - {fileID: 11400000, guid: 1022f72db16a11a48b2a4dc23bcebfa3, type: 2}
+  - {fileID: 11400000, guid: f5f081ef4f78f654aba890c766ca7cbe, type: 2}
+  oneStarDrinks: []
