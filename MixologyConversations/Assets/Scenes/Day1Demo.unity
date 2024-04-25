@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &102004641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -181,7 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b3c200e8c82f448b59992c5e1169b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptButton: {fileID: 102004643}
 --- !u!114 &102004643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 102004644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102004642}
+        m_TargetAssemblyTypeName: MixingTablePrompter, Assembly-CSharp
+        m_MethodName: goToMixingTable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &102004644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,9 +513,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -916718153
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: 793197459
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6bf920c474d1d0c439cb827f2262baa6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -531,6 +542,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &596803224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3553706869154928630, guid: 238cb77441d5da846894fbbb09b01ac1, type: 3}
+  m_PrefabInstance: {fileID: 1998281061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &605717158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9032967437686349809, guid: 8ee7fd2a58549ce4785f1b79f2f25596, type: 3}
@@ -554,6 +570,10 @@ PrefabInstance:
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 2195742029611974887, guid: bd895856011e6e440b73de7ed4a98149, type: 3}
+      propertyPath: shelf
+      value: 
+      objectReference: {fileID: 596803224}
+    - target: {fileID: 2195742029611974887, guid: bd895856011e6e440b73de7ed4a98149, type: 3}
       propertyPath: notepadPanel
       value: 
       objectReference: {fileID: 230665150}
@@ -561,6 +581,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 841802181}
+    - target: {fileID: 2195742029611974887, guid: bd895856011e6e440b73de7ed4a98149, type: 3}
+      propertyPath: dimBackground
+      value: 
+      objectReference: {fileID: 1380859064}
     - target: {fileID: 2195742029611974887, guid: bd895856011e6e440b73de7ed4a98149, type: 3}
       propertyPath: shelfPrompter
       value: 
@@ -957,9 +981,17 @@ PrefabInstance:
       propertyPath: characters.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 16310bdd923479443bd41d7f57a08c57, type: 2}
+    - target: {fileID: 7611585416550080258, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
+      propertyPath: startingGameState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119639081305136377, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8203346269966989471, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8203346269966989471, guid: fa1cace8a1cf7e8499d1b1970d7705f6, type: 3}
       propertyPath: drinkSpawn
@@ -1249,6 +1281,14 @@ PrefabInstance:
     - target: {fileID: 5544932871143771147, guid: 8ee7fd2a58549ce4785f1b79f2f25596, type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316667528906922616, guid: 8ee7fd2a58549ce4785f1b79f2f25596, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316667528906922616, guid: 8ee7fd2a58549ce4785f1b79f2f25596, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8256588641043855492, guid: 8ee7fd2a58549ce4785f1b79f2f25596, type: 3}
       propertyPath: m_IsActive

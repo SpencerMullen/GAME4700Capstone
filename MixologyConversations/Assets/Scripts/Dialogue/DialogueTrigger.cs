@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !DialogueManager.Active)
+        if (Input.GetMouseButtonDown(0) && !DialogueManager.Active && LevelManager.Instance.currentGameState.Equals(GameState.WAIT_FOR_CLICK))
         {
             StartCoroutine(TriggerDialogue());
         }

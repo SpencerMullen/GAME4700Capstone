@@ -67,7 +67,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Left mouse button to continue dialogue
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && LevelManager.Instance.currentGameState.Equals(GameState.WAIT_FOR_CLICK)) // TODO : Track internally if dialogue can be started
         {
             ContinueStory();
         }
@@ -94,6 +94,8 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        LevelManager.Instance.DialogueComplete();
     }
 
     private void ContinueStory()
